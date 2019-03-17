@@ -1,0 +1,12 @@
+version: "3"
+services:
+  akkhttpserver:
+    image: oleh19850405/todolistakkahttp
+    ports:
+      - "8080:8080"
+  reactclient:
+    image: oleh19850405/todolistreact
+    ports:
+      - "8000:80"
+    depends_on:
+      - akkhttpserver
